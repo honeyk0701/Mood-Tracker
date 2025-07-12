@@ -1,0 +1,118 @@
+/* Fonts and Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  color: #333;
+  padding: 30px;
+  text-align: center;
+}
+
+nav {
+  background-color: #4a4e69;
+  padding: 12px 0;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container Layout */
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Mood emojis */
+.moods {
+  margin-top: 15px;
+}
+
+.moods span {
+  font-size: 2.5rem;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.moods span:hover {
+  transform: scale(1.4);
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+/* Button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Quote */
+#quote-box {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+}

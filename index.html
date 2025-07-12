@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MindfulMe – Mood Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="history.html">My Entries</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>🌈 Welcome to MindfulMe</h1>
+    <p class="subtitle">Your personal space to track your mood & reflect daily</p>
+
+    <div class="card mood-section">
+      <h3>How are you feeling today?</h3>
+      <div class="moods">
+        <span onclick="selectMood('happy')" title="Happy">😊</span>
+        <span onclick="selectMood('sad')" title="Sad">😔</span>
+        <span onclick="selectMood('angry')" title="Angry">😠</span>
+        <span onclick="selectMood('tired')" title="Tired">😴</span>
+        <span onclick="selectMood('love')" title="Love">😍</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <textarea id="journal" placeholder="Write about your day..."></textarea>
+      <button onclick="saveEntry()">📝 Save My Mood</button>
+      <div id="quote-box"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

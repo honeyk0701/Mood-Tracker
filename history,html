@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MindfulMe – My Entries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="history.html">My Entries</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>📘 Your Past Entries</h1>
+    <ul id="entries"></ul>
+  </div>
+
+  <script>
+    const entries = JSON.parse(localStorage.getItem("mindfulEntries")) || [];
+    const list = document.getElementById("entries");
+
+    if (entries.length === 0) {
+      list.innerHTML = "<p>No entries yet. Go to Home to add some!</p>";
+    } else {
+      entries.slice().reverse().forEach(entry => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${entry.date}</strong> (${entry.mood}): ${entry.note}`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
